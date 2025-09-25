@@ -22,7 +22,7 @@ export function controlClickAndScrollForNav() {
     });
 
     navLinks.forEach((link) => {
-      link.addEventListener.remove("active");
+      link.classList.remove("active");
       if (link.getAttribute("href") === "#" + current) {
         link.classList.add("active");
       }
@@ -46,7 +46,7 @@ export function detectedSections() {
 
 export function messageAlert() {
   const notWorking = document.getElementById("notWorking");
-  const notWorking2 = document.getElementById("notWorking2")
+  const notWorking2 = document.getElementById("notWorking2");
   const modalAlert = document.getElementById("modalAlert");
   const acceptButton = document.getElementById("acceptButton");
 
