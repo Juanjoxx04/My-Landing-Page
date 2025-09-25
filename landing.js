@@ -1,4 +1,4 @@
-export function controlClickAndScrollForNav() {
+function controlClickAndScrollForNav() {
   const navLinks = document.querySelectorAll(".nav-ul a");
   const scrollSection = document.querySelectorAll("section");
 
@@ -30,7 +30,7 @@ export function controlClickAndScrollForNav() {
   });
 }
 
-export function detectedSections() {
+function detectedSections() {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -44,7 +44,7 @@ export function detectedSections() {
   });
 }
 
-export function messageAlert() {
+function messageAlert() {
   const notWorking = document.getElementById("notWorking");
   const notWorking2 = document.getElementById("notWorking2");
   const modalAlert = document.getElementById("modalAlert");
@@ -67,3 +67,7 @@ export function messageAlert() {
     document.body.classList.remove("noScroll");
   });
 }
+
+controlClickAndScrollForNav();
+detectedSections();
+messageAlert();
