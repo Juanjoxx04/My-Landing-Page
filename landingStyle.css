@@ -237,7 +237,7 @@ body {
 .sections-fade-in {
     opacity: 0;
     transform: translateY(30px);
-    transition: all 1s ease;
+    transition: all 1.2s ease;
 }
 
 .sections-fade-in.visible {
@@ -268,14 +268,14 @@ body {
     box-shadow: 0 0px 25px rgb(255, 255, 255);
 }
 
-.img-hypermotos {
+.img-proyects {
     width: 41rem;
     border-radius: 20px;
     border: 2px solid black;
 }
 
 @media (max-width: 1470px) {
-    .img-hypermotos {
+    .img-proyects {
         width: 17.5rem;
     }
 }
