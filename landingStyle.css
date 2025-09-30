@@ -107,7 +107,7 @@ body {
 .nav-ul a.active {
     font-weight: bold;
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 .styleH {
