@@ -30,12 +30,8 @@ body {
 }
 
 .container2 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 150px;
     background-color: rgba(193, 193, 186, 0.142);
-    border-radius: clamp(15px, 3vw, 20px);
+    border-radius: 25px;
     padding: clamp(1rem, 4vw, 2.5rem);
     width: min(90%, 1800px);
     margin: clamp(5rem, 8vw, 8rem) auto;
@@ -44,28 +40,31 @@ body {
 }
 
 .container3 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 8rem;
     background-color: #858585b3;
     box-shadow: 0px 0px 12px #ffffff;
     border-radius: clamp(15px, 4vw, 20px);
     border: #000000;
-    padding: clamp(1rem, 2vw, 2rem);
+    padding: clamp(1rem, 5vw, 4rem);
     width: min(90%, 80rem);
-    margin: clamp(0.5rem, 4vw, 2rem) auto;
+    margin: clamp(8rem, 10vw, 10rem) auto;
     font-size: clamp(1rem, 3vw, 1.5rem);
     font-style: italic;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: white;
 }
 
+.aboutContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10rem;
+}
+
 .nav {
     position: fixed;
     inset: 1rem 0 auto 0;
     margin-inline: auto;
-    width: fit-content;
+    width: clamp(1rem, 49vw, 47rem);
     z-index: 1000;
     background-color: rgba(135, 135, 135, 60%);
     backdrop-filter: blur(30px) saturate(150%);
@@ -102,7 +101,7 @@ body {
 .nav-ul a:hover {
     font-weight: bold;
     text-decoration: none;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .nav-ul a.active {
@@ -111,7 +110,7 @@ body {
     color: white;
 }
 
-.styleH1 {
+.styleH {
     display: flex;
     justify-content: center;
     font-size: clamp(1.5rem, 3vw, 8rem);
@@ -124,7 +123,10 @@ body {
 }
 
 .styleH2 {
-    margin-top: 2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 2rem;
 }
 
 .styleP {
@@ -217,8 +219,6 @@ body {
     border-radius: 20px;
     border: 2px solid black;
 }
-
-
 
 .container-options {
     display: flex;
@@ -406,14 +406,21 @@ body {
 
 /* Medias */
 @media (max-width: 978px) {
-    .container2 {
+    .styleH {
+        font-size: 1.3rem;
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    .aboutContent {
         flex-direction: column;
         text-align: center;
+        gap: 5rem;
     }
 
     .img-personal {
         margin-top: 0px;
-        max-width: 70%;
+        max-width: 60%;
     }
 }
 
