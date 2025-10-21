@@ -6,6 +6,17 @@ function controlClickAndScrollForNav() {
     link.addEventListener("click", function () {
       navLinks.forEach((l) => l.classList.remove("active"));
       this.classList.add("active");
+
+      if (window.innerWidth <= 1280) {
+        const navul = document.querySelector(".nav-ul");
+        const navShow = document.querySelector(".nav");
+        const menuIcon = document.querySelector(".menu-icon");
+
+        navul.classList.remove("show");
+        navShow.classList.remove("show");
+        document.body.classList.remove("noScroll");
+        menuIcon.textContent = "☰";
+      }
     });
   });
 
@@ -68,6 +79,26 @@ function messageAlert() {
   });
 }
 
+function showMenu() {
+  const menuIcon = document.querySelector(".menu-icon");
+  const navul = document.querySelector(".nav-ul");
+  const navShow = document.querySelector(".nav");
+
+  menuIcon.addEventListener("click", function (e) {
+    e.preventDefault();
+    navul.classList.toggle("show");
+    navShow.classList.toggle("show");
+    document.body.classList.add("noScroll");
+    
+    if (menuIcon.textContent === "☰") {
+      menuIcon.textContent = "✖";
+    } else {
+      menuIcon.textContent = "☰";
+    }
+  });
+}
+
 controlClickAndScrollForNav();
 detectedSections();
 messageAlert();
+showMenu();
