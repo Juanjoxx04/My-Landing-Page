@@ -87,6 +87,7 @@ function showMenu() {
       menuIcon.textContent = "✖";
     } else {
       menuIcon.textContent = "☰";
+      document.body.classList.remove("noScroll");
     }
   });
 }
