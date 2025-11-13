@@ -57,17 +57,10 @@ function detectedSections() {
 
 function messageAlert() {
   const notWorking = document.getElementById("notWorking");
-  const notWorking2 = document.getElementById("notWorking2");
   const modalAlert = document.getElementById("modalAlert");
   const acceptButton = document.getElementById("acceptButton");
 
   notWorking.addEventListener("click", function (e) {
-    e.preventDefault();
-    modalAlert.classList.add("show");
-    document.body.classList.add("noScroll");
-  });
-
-  notWorking2.addEventListener("click", function (e) {
     e.preventDefault();
     modalAlert.classList.add("show");
     document.body.classList.add("noScroll");
