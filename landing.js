@@ -55,23 +55,6 @@ function detectedSections() {
   });
 }
 
-function messageAlert() {
-  const notWorking = document.getElementById("notWorking");
-  const modalAlert = document.getElementById("modalAlert");
-  const acceptButton = document.getElementById("acceptButton");
-
-  notWorking.addEventListener("click", function (e) {
-    e.preventDefault();
-    modalAlert.classList.add("show");
-    document.body.classList.add("noScroll");
-  });
-
-  acceptButton.addEventListener("click", function (e) {
-    modalAlert.classList.remove("show");
-    document.body.classList.remove("noScroll");
-  });
-}
-
 function showMenu() {
   const menuIcon = document.querySelector(".menu-icon");
   const navul = document.querySelector(".nav-ul");
@@ -82,7 +65,7 @@ function showMenu() {
     navul.classList.toggle("show");
     navShow.classList.toggle("show");
     document.body.classList.add("noScroll");
-    
+
     if (menuIcon.textContent === "☰") {
       menuIcon.textContent = "✖";
     } else {
@@ -94,5 +77,4 @@ function showMenu() {
 
 controlClickAndScrollForNav();
 detectedSections();
-messageAlert();
 showMenu();
